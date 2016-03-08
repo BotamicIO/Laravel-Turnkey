@@ -9,19 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace DraperStudio\TurnKey\Contracts;
+namespace DraperStudio\Tests\Turnkey;
+
+use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
 
 /**
- * Interface FeedbackMailer.
+ * This is the service provider test class.
  *
  * @author DraperStudio <hello@draperstudio.tech>
  */
-interface FeedbackMailer
+class ServiceProviderTest extends AbstractTestCase
 {
-    /**
-     * @param $body
-     *
-     * @return mixed
-     */
-    public function send($body);
+    use ServiceProviderTrait;
 }
