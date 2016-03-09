@@ -36,9 +36,6 @@ class BaseController extends Controller
         $this->session = $session;
     }
 
-    /**
-     *
-     */
     protected function validateSession()
     {
         if (!$this->session->has('turnkey')) {
@@ -46,9 +43,6 @@ class BaseController extends Controller
         }
     }
 
-    /**
-     *
-     */
     protected function flashSessionKey()
     {
         $this->session->flash('turnkey', true);
