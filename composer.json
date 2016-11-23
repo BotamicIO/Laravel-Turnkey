@@ -1,29 +1,21 @@
 {
     "name": "faustbrian/laravel-turnkey",
     "description": "Account cancellation for Laravel.",
-    "keywords": [
-        "laravel",
-        "framework",
-        "Laravel-turnkey",
-        "Laravel TurnKey",
-        "Brian Faust",
-        "faustbrian"
-    ],
+    "keywords": ["laravel", "framework", "Laravel-turnkey", "Laravel TurnKey", "Brian Faust", "faustbrian"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
         "email": "hello@brianfaust.de",
-        "homepage": "https://brianfaust.de",
-        "role": "Developer"
+        "homepage": "https://brianfaust.de"
     }],
     "require": {
-        "php": "^5.6.4 || ^7.0",
+        "php": "^7.0",
         "faustbrian/laravel-service-provider": "^1.0",
-        "illuminate/auth": "5.2.* || 5.3.*",
-        "illuminate/database": "5.2.* || 5.3.*",
-        "illuminate/mail": "5.2.* || 5.3.*",
-        "illuminate/session": "5.2.* || 5.3.*",
-        "illuminate/view": "5.2.* || 5.3.*"
+        "illuminate/auth": "5.3.*",
+        "illuminate/database": "5.3.*",
+        "illuminate/mail": "5.3.*",
+        "illuminate/session": "5.3.*",
+        "illuminate/view": "5.3.*"
     },
     "require-dev": {
         "graham-campbell/testbench": "^3.2",
