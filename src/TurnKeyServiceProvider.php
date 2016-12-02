@@ -11,7 +11,9 @@
 
 namespace BrianFaust\TurnKey;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+use BrianFaust\ServiceProvider\ServiceProvider;
+
+class TurnKeyServiceProvider extends ServiceProvider
 {
     public function boot()
     {
