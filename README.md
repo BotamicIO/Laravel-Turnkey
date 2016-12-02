@@ -13,22 +13,19 @@ $ composer require faustbrian/laravel-turnkey
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    'BrianFaust\TurnKey\TurnKeyServiceProvider'
-];
+BrianFaust\TurnKey\TurnKeyServiceProvider::class
 ```
 
 To get started, you'll need to publish the vendor assets:
 
 ```bash
-php artisan vendor:publish
+php artisan vendor:publish --provider="BrianFaust\TurnKey\TurnKeyServiceProvider"
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new BrianFaust\Skeleton();
-echo $skeleton->echoPhrase('Hello, BrianFaust!');
+...
 ```
 
 ## Security
