@@ -25,7 +25,7 @@ class BaseController extends Controller
 
     protected function validateSession()
     {
-        if (! $this->session->has('turnkey')) {
+        if (!$this->session->has('turnkey')) {
             return abort(403);
         }
     }
