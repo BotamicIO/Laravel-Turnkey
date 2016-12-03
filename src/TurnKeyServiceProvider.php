@@ -9,13 +9,15 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\TurnKey;
 
 use BrianFaust\ServiceProvider\ServiceProvider;
 
 class TurnKeyServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         $this->publishConfig();
 
@@ -24,19 +26,19 @@ class TurnKeyServiceProvider extends ServiceProvider
         $this->loadViews();
     }
 
-    public function register()
+    public function register(): void
     {
         parent::register();
 
         $this->mergeConfig();
     }
 
-    public function provides()
+    public function provides(): array
     {
         return array_merge(parent::provides(), ['cookie-consent']);
     }
 
-    public function getPackageName()
+    public function getPackageName(): string
     {
         return 'turnkey';
     }
