@@ -22,9 +22,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\TurnKey;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class TurnKeyServiceProvider extends ServiceProvider
+class TurnKeyServiceProvider extends AbstractServiceProvider
 {
     public function boot(): void
     {
