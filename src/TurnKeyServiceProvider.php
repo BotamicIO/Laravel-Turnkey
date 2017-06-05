@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel TurnKey.
  *
@@ -14,33 +11,25 @@ declare(strict_types=1);
 
 namespace BrianFaust\TurnKey;
 
-use BrianFaust\ServiceProvider\AbstractServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
-class TurnKeyServiceProvider extends AbstractServiceProvider
+class TurnKeyServiceProvider extends ServiceProvider
 {
-    public function boot(): void
+    public function boot()
     {
-        $this->publishConfig();
+        $this->publishes([
+            __DIR__.'/../config/laravel-turnkey.php' => config_path('laravel-turnkey.php'),
+        ], 'config');
 
-        $this->publishViews();
+        $this->publishes([
+            __DIR__.'/../resources/views' => base_path('resources/views/vendor/laravel-turnkey'),
+        ], 'views');
 
-        $this->loadViews();
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-turnkey');
     }
 
-    public function register(): void
+    public function register()
     {
-        parent::register();
-
-        $this->mergeConfig();
-    }
-
-    public function provides(): array
-    {
-        return array_merge(parent::provides(), ['cookie-consent']);
-    }
-
-    public function getPackageName(): string
-    {
-        return 'turnkey';
+        $this->mergeConfigFrom(__DIR__.'/../config/laravel-turnkey.php', 'laravel-turnkey');
     }
 }

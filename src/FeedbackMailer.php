@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel TurnKey.
  *
@@ -29,9 +26,9 @@ class FeedbackMailer implements MailerContract
 
     public function send($body)
     {
-        $view = config('turnkey.feedback.view');
-        $subject = config('turnkey.feedback.subject');
-        $email = config('turnkey.feedback.email');
+        $view = config('laravel-turnkey.feedback.view');
+        $subject = config('laravel-turnkey.feedback.subject');
+        $email = config('laravel-turnkey.feedback.email');
 
         $this->mailer->send(
             $view, ['body' => $body],

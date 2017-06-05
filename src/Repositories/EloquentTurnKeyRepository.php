@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel TurnKey.
  *
@@ -12,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\TurnKey;
+namespace BrianFaust\TurnKey\Repositories;
 
 use BrianFaust\TurnKey\Contracts\TurnKeyRepository;
 
@@ -20,7 +17,7 @@ class EloquentTurnKeyRepository implements TurnKeyRepository
 {
     public function erase($userId)
     {
-        $model = app()->make(config('turnkey.model'));
+        $model = app()->make(config('laravel-turnkey.model'));
 
         return $model->find($userId)->delete();
     }

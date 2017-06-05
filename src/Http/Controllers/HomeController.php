@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel TurnKey.
  *
@@ -42,11 +39,11 @@ class HomeController extends BaseController
 
     public function handle(DeleteAccountRequest $request)
     {
-        $identifier = config('turnkey.identifier');
+        $identifier = config('laravel-turnkey.identifier');
 
         $credentials = [
             $identifier => $this->auth->user()->$identifier,
-            'password'  => $request->get('password'),
+            'password' => $request->get('password'),
         ];
 
         if ($this->auth->validate($credentials)) {
@@ -54,7 +51,7 @@ class HomeController extends BaseController
 
             $this->auth->logout();
 
-            $next = config('turnkey.feedback.active') ? 'turnkey.feedback'
+            $next = config('laravel-turnkey.feedback.active') ? 'turnkey.feedback'
                                                       : 'turnkey.goodbye';
 
             $this->flashSessionKey();
@@ -62,7 +59,7 @@ class HomeController extends BaseController
             return redirect()->route($next);
         }
 
-        return redirect(config('turnkey.urls.index'))
+        return redirect(config('laravel-turnkey.urls.index'))
                     ->withErrors([
                         'invalid' => 'These credentials do not match our records.',
                     ]);
