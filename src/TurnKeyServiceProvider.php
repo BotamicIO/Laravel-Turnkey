@@ -15,6 +15,9 @@ use Illuminate\Support\ServiceProvider;
 
 class TurnKeyServiceProvider extends ServiceProvider
 {
+    /**
+     * Bootstrap any application services.
+     */
     public function boot()
     {
         $this->publishes([
@@ -28,6 +31,9 @@ class TurnKeyServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-turnkey');
     }
 
+    /**
+     * Register any application services.
+     */
     public function register()
     {
         $this->mergeConfigFrom(__DIR__.'/../config/laravel-turnkey.php', 'laravel-turnkey');
