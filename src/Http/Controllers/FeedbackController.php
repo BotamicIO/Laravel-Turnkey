@@ -11,9 +11,9 @@
 
 namespace BrianFaust\TurnKey\Http\Controllers;
 
-use BrianFaust\TurnKey\Contracts\FeedbackMailer;
 use Illuminate\Http\Request;
 use Illuminate\Session\SessionManager;
+use BrianFaust\TurnKey\Contracts\FeedbackMailer;
 
 class FeedbackController extends BaseController
 {
