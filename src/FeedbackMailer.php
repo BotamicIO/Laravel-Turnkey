@@ -13,9 +13,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\TurnKey;
 
-use Illuminate\Mail\Message;
-use Illuminate\Contracts\Mail\Mailer;
 use BrianFaust\TurnKey\Contracts\FeedbackMailer as MailerContract;
+use Illuminate\Contracts\Mail\Mailer;
+use Illuminate\Mail\Message;
 
 class FeedbackMailer implements MailerContract
 {
