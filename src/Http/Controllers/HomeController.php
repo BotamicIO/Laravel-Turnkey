@@ -13,10 +13,10 @@ declare(strict_types=1);
 
 namespace BrianFaust\TurnKey\Http\Controllers;
 
-use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Session\SessionManager;
 use BrianFaust\TurnKey\Contracts\TurnKeyRepository;
 use BrianFaust\TurnKey\Http\Requests\DeleteAccountRequest;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Session\SessionManager;
 
 class HomeController extends BaseController
 {
