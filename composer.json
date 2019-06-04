@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-turnkey",
+    "name": "artisanry/turnkey",
     "description": "Account cancellation for Laravel.",
-    "keywords": ["laravel", "framework", "Laravel-turnkey", "Laravel TurnKey", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-turnkey", "Laravel TurnKey"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -24,12 +24,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\TurnKey\\": "src/"
+            "Artisanry\\TurnKey\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\TurnKey\\": "tests"
+            "Artisanry\\Tests\\TurnKey\\": "tests"
         }
     },
     "config": {
@@ -42,7 +42,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\TurnKey\\TurnKeyServiceProvider"
+                "Artisanry\\TurnKey\\TurnKeyServiceProvider"
             ]
         }
     },

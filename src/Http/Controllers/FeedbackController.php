@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel TurnKey.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\TurnKey\Http\Controllers;
+namespace Artisanry\TurnKey\Http\Controllers;
 
-use BrianFaust\TurnKey\Contracts\FeedbackMailer;
+use Artisanry\TurnKey\Contracts\FeedbackMailer;
 use Illuminate\Http\Request;
 use Illuminate\Session\SessionManager;
 
